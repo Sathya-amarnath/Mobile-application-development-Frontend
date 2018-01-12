@@ -1,0 +1,91 @@
+<!--
+  Generated template for the TourPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+    <ion-navbar>
+        <button ion-button menuToggle>
+            
+        <ion-icon name="menu"></ion-icon>
+          
+        </button>
+      <ion-title>Tour</ion-title>
+    </ion-navbar>
+
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="seg">
+        <ion-segment-button value="deity_list">
+          Deity Information
+        </ion-segment-button>
+        <ion-segment-button value="tour_calendar">
+          Calendar
+        </ion-segment-button>
+        <ion-segment-button value="tour_form">
+          Form 
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  
+  </ion-header>
+  
+  <!--
+  <ion-content padding>
+    <ion-list inset>
+      <ion-item *ngFor="let deity of deities">
+        <h2>{{user.name}}</h2>
+        <h2>{{user.price}}</h2>
+       <img src="http://localhost:3000/{{user.productImage}}">
+        
+      </ion-item>
+    </ion-list>
+  </ion-content>-->
+  <!--<ion-content class="card-background-page">
+    
+      <ion-card *ngFor="let deity of deities">
+        <img src="http://localhost:3000/{{deity.image}}"/>
+        <div class="card-title">{{deity.name | uppercase}}</div> 
+          <br>
+           <iframe width="100%" [src]="san(deity.url)" frameborder="0" allowfullscreen></iframe>
+      </ion-card>
+      
+    </ion-content>
+  -->
+  <ion-content>
+      <div [ngSwitch]="seg">
+      <ion-list *ngSwitchCase="'deity_list'">
+          <ion-list-header>
+            Deities
+          </ion-list-header>
+          <a ion-item *ngFor="let deity of deities" (click)="openModal(deity)">
+            {{deity.name | uppercase}} 
+            </a>
+            
+          
+        </ion-list>
+        
+        <ion-list *ngSwitchCase="'tour_calendar'">
+          
+          <div>
+            <iframe frameborder="0"  width= "100%" height="600" scrolling="no" src="https://goo.gl/5dpkJy" style="border-width:0"></iframe>
+          </div>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'tour_form'">   
+            <iframe frameborder="0"  marginheight="0" marginwidth="0" src="https://spreadsheets.google.com/embeddedform?key=rwH3MtvYWDrDgsZfe_Pl5dA" width="700">Loading...</iframe>  
+        </ion-list>
+        </div>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <a ion-button color="primary" (click)="contact()" >Contact Us</a>
+      <div class="social">
+        <ion-icon name="logo-facebook" class="fbicon"></ion-icon>
+        <ion-icon name="logo-twitter" class="twicon"></ion-icon>
+        <ion-icon name="logo-instagram" class="inicon"></ion-icon>
+    </div>
+    </ion-toolbar>
+  </ion-footer>

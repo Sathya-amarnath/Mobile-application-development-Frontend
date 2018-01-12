@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+   
+    
+    
+   <ion-title> HSMN<img src="../assets/imgs/HSMN-Log-_-No-Background.png" class="img1"></ion-title>
+  
+  </ion-navbar>
+  <div class="bar bar-header">
+      <h1 class="title">Welcome!</h1>
+    </div>
+</ion-header>
+
+<!--
+<ion-header-bar align-title="center">
+    <div class="buttons">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <h1 class="title">HSMN<img class="title-image" src="../assets/imgs/HSMN-Log-_-No-Background.png" width="123" height="43" /></h1>      
+      </div>
+
+</ion-header-bar>-->
+<ion-content padding class="backgcol">
+    
+        
+   <ion-card>
+      <ion-card-header>
+          <img src="../assets/imgs/HSMN-Log-_-No-Background.png">
+      </ion-card-header>
+      <ion-card-content>
+          The Hindu Society of Minnesota provides religious, 
+          spiritual, educational, social and cultural activities 
+          for all generations of the Hindu community. As the largest 
+          Hindu temple in North America, our organization offers the unique 
+          benefit of providing a multitude of community resources and activities under one roof.
+      </ion-card-content>
+    </ion-card>
+    <section *ngIf="afAuth.authState | async; let user; else showlogin">
+      <button ion-button clear >logout</button>
+    </section>
+  <ng-template #showlogin>
+  <button ion-button full color="secondary" (click)="signup()">Sign Up </button>
+  
+  <button ion-button full (click)="login()">Login</button>
+</ng-template>
+
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <a ion-button color="primary" (click)="contact()">Contact Us</a>
+      <div class="social">
+      <ion-icon name="logo-facebook" class="fbicon"></ion-icon>
+      <ion-icon name="logo-twitter" class="twicon"></ion-icon>
+      <ion-icon name="logo-instagram" class="inicon"></ion-icon>
+    </div>
+    </ion-toolbar>
+  </ion-footer>

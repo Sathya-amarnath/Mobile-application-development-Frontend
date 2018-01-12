@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        {{deities_name}}
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="closemod1()">Close</button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="card-background-page">
+      
+        <ion-card >
+          <img src="http://localhost:3000/{{deities_image}}"/>
+          <div class="card-title">{{deities_name | uppercase}}</div> 
+            <br> 
+            <iframe width="100%" [src]="san(deities_url)" frameborder="0" allowfullscreen></iframe>
+       </ion-card>
+        
+      </ion-content>
+      <ion-footer>
+          <ion-toolbar>
+            <a ion-button color="primary" (click)="contact()" >Contact Us</a>
+            <div class="social">
+              <ion-icon name="logo-facebook" class="fbicon"></ion-icon>
+              <ion-icon name="logo-twitter" class="twicon"></ion-icon>
+              <ion-icon name="logo-instagram" class="inicon"></ion-icon>
+          </div>
+          </ion-toolbar>
+        </ion-footer>

@@ -1,0 +1,34 @@
+page-tour {
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 20%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .googleCalendar{
+    position:relative;
+    height:0;
+    width:50;
+    padding-bottom:50%;
+  }
+  .googleCalendar iframe{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+  }
+  
+  
+}
+}
