@@ -74,10 +74,17 @@
         </ion-list>
         
         <ion-list *ngSwitchCase="'tour_calendar'">
-          
-          <div>
-            <iframe frameborder="0"  width= "100%" height="600" scrolling="no" src="https://goo.gl/5dpkJy" style="border-width:0"></iframe>
+          <br>
+          <div class="responsive-iframe-container small-container">
+              <iframe frameborder="0" height="600" scrolling="no" 
+              src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;hl=en&amp;
+              bgcolor=%23FFFFFF&amp;src=hindumandirmn.org_o9bpj8c8e4c896ae008c1vtpco%40group.calendar.google.com&amp;color=%230F4B38&amp;
+              ctz=America%2FChicago" style="border-width:0" width="100%"></iframe>
+
           </div>
+         <!-- <div>
+            <iframe frameborder="0"  width= "100%" height="600" scrolling="no" src="https://goo.gl/5dpkJy" style="border-width:0"></iframe>
+          </div>-->
         </ion-list>
 
         <ion-list *ngSwitchCase="'tour_form'">   
