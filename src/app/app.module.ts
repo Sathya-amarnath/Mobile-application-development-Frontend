@@ -19,6 +19,7 @@ import {ServicesPage} from '../pages/services/services';
 import {TourPage} from '../pages/tour/tour';
 import {UserinfoPage} from '../pages/userinfo/userinfo';
 import {ResetpasswordPage} from '../pages/resetpassword/resetpassword';
+import {PaymentPage} from '../pages/payment/payment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import {Facebook} from '@ionic-native/facebook';
@@ -56,7 +57,8 @@ const firebaseAuth = {
     TourPage,
     UserinfoPage,
     ResetpasswordPage,
-    ModalcontentdeityPage
+    ModalcontentdeityPage,
+    PaymentPage
     
   ],
   imports: [
@@ -81,7 +83,8 @@ const firebaseAuth = {
     TourPage,
     UserinfoPage,
     ResetpasswordPage,
-    ModalcontentdeityPage
+    ModalcontentdeityPage,
+    PaymentPage
   ],
   providers: [
     StatusBar,

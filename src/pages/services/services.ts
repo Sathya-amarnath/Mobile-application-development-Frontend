@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ContactPage} from '../contact/contact';
+import {PaymentPage} from '../payment/payment';
 /**
  * Generated class for the ServicesPage page.
  *
@@ -24,5 +25,8 @@ export class ServicesPage {
 
   contact(){
     this.navCtrl.push(ContactPage);
+  }
+  pay(){
+    this.navCtrl.push(PaymentPage);
   }
 }
