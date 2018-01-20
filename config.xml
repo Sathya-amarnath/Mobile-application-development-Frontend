@@ -93,4 +93,5 @@
     </plugin>
     <engine name="android" spec="~6.3.0" />
     <plugin name="com.paypal.cordova.mobilesdk" spec="^3.5.0" />
+    <allow-navigation href="http://192.168.0.7:8100" />
 </widget>
