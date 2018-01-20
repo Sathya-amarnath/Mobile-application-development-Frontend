@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 //import {HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -31,6 +32,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import firebase from 'firebase';
 import { AuthProvider } from '../providers/auth/auth';
 import { DataProvider } from '../providers/data/data';
+import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 
 const firebaseAuth = {
   apiKey: "AIzaSyAtz63gyKSEsolAtOIBa_IHY9EGV_UsBI8",
@@ -63,6 +65,7 @@ const firebaseAuth = {
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
@@ -93,8 +96,10 @@ const firebaseAuth = {
     Facebook,
     AngularFireAuth,
     AuthProvider,
-    DataProvider
+    DataProvider,
   //  AuthProvider
+    PayPal
+
   ]
 })
 export class AppModule {}
