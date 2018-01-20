@@ -24,7 +24,6 @@ $app-direction: ltr;
 
 
 
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -40,6 +39,7 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222
 );
+
 
 
 // App iOS Variables
@@ -104,10 +104,11 @@ $colors: (
   color:#9b6954;
 }
 .img1{
-  vertical-align:middle; height:40px; width: 40px;
+  vertical-align:middle; height:40px; width: 70px;
 }
 .div1{
   margin-left: 10%;
   margin-right: auto;
   display: block;
 }
+

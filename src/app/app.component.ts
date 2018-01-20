@@ -22,7 +22,7 @@ export class MyApp {
 
   rootPage:any;
 
-  pages: Array<{title: string, component: any}>;
+  pages; //Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -38,12 +38,12 @@ export class MyApp {
     });
     // used for an example of ngFor and navigation
     this.pages = [
-      {title:'Home',component: HomePage},
-      { title: 'Services', component: ServicesPage },
-      { title: 'Facility Calendar', component: FacilityPage },
-      {title: 'Priest Calendar', component: PriestPage},
-      {title: 'Temple Tour', component: TourPage},
-      {title: 'Kitchen Services', component: KitchenPage}
+      {title:'Home',component: HomePage, icon: 'home'},
+      { title: 'Services', component: ServicesPage, icon:'people' },
+      { title: 'Facility Calendar', component: FacilityPage, icon:'calendar' },
+      {title: 'Priest Calendar', component: PriestPage, icon:'calendar'},
+      {title: 'Temple Tour', component: TourPage, icon:'bus'},
+      {title: 'Kitchen Services', component: KitchenPage, icon:'restaurant'}
       
     ];
    const unsubscribe = firebase.auth().onAuthStateChanged( user => {
