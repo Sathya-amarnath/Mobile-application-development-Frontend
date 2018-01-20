@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-  <form name="paymentForm">
+  <!--<form name="paymentForm">
 		<ion-item>
 			<ion-label floating>Amount</ion-label>
 			<ion-input type="text" name="amount" [(ngModel)]="payment.amount"></ion-input>
@@ -36,5 +36,15 @@
 		<p>
 			<button ion-button block color="secondary" (click)="makePayment()">MAKE PAYMENT</button>
 		</p>
+</form>-->
+
+<form>
+	<div>
+		<ion-label>Amount</ion-label>
+		<input type="number" #amt>
+	</div>
+	<button ion-button block color="secondary" (click)="makePayment(amt.value)">MAKE PAYMENT</button>
 </form>
+
+
 </ion-content>
